@@ -8,7 +8,7 @@ def create_connection(database):
             return conn
         except Error as e:
             print(e)
-
+#c is for candidate
 def create_table(c):
         sql = """ 
             CREATE TABLE IF NOT EXISTS items (
@@ -18,15 +18,15 @@ def create_table(c):
             ); 
         """
         c.execute(sql)
-
+#function we were looking for.  creates items to vote for
 def create_item(c, item):
         sql = ''' INSERT INTO items(name)
                   VALUES (?) '''
         c.execute(sql, item)
-
+#changes number of votes a candidate has
 def update_item(c, item):
         sql = ''' UPDATE items
-                  SET votes = votes+1 
+                  SET votes = votes+10 
                   WHERE name = ? '''
         c.execute(sql, item)
 
