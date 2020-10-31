@@ -38,7 +38,7 @@ def select_all_items(c, name):
         rows = c.fetchall()
         rows.append({'name' : name})
         return json.dumps(rows)
-
+#main method creates categories / candidates to vote on
 def main():
         database = "./pythonsqlite.db"
         conn = create_connection(database)
