@@ -9,7 +9,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-    # configure pusher object
+    # configure pusher object 
 pusher = Pusher(
     app_id="1099784",
     key="0ceeb401a51730c17945",
@@ -32,7 +32,7 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Invalid Credentials. Please try again.'
         else:
-            return redirect(url_for('registration'))
+            return redirect(url_for('/gavoters'))
     return render_template('login.html', error=error)
 #backslash triggers function
 @app.route('/gavoters')
