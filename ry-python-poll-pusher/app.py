@@ -25,7 +25,7 @@ c = conn.cursor()
 def main():
         global conn, c
 # Route for handling the login page logic
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     error = None
     if request.method == 'POST':
@@ -35,7 +35,7 @@ def login():
             return redirect(url_for('home'))
     return render_template('login.html', error=error)
 #backslash triggers function
-@app.route('/')
+@app.route('/gavoters')
 def index():
         return render_template('index.html')
 
