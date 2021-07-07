@@ -25,8 +25,8 @@
     Pusher.logToConsole = true;
 
     // Configure Pusher instance
-    const pusher = new Pusher('PUSHER_APP_KEY', {
-      cluster: 'PUSHER_APP_CLUSTER',
+    const pusher = new Pusher('0ceeb401a51730c17945', {
+      cluster: 'us2',
       encrypted: true
     });
 

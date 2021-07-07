@@ -22,7 +22,9 @@
 
     // Subscribe to poll trigger
     var channel = pusher.subscribe('poll');
-
+    //make so bar can fill all the way
+    //when bar fills up, goes to new screen'
+    //some history? when diff users vote, diff accoounted for
     // Listen to vote event
     channel.bind('vote', function(data) {
       for (i = 0; i < (data.length - 1); i++) { 
